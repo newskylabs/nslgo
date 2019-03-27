@@ -3,7 +3,10 @@
 
 I am currently reading the book
 ["Deep Learning and the Game of Go"](https://www.manning.com/books/deep-learning-and-the-game-of-go)
-by Max Pumperla and Kevin Ferguson - and this repository is for doing my "homework" :)
+by 
+[Max Pumperla](https://maxpumperla.com/) and 
+[Kevin Ferguson](https://github.com/macfergus) - 
+and this repository is for doing my "homework" :)
 
 See also the github repository of the book:
 
