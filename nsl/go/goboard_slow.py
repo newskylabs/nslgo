@@ -9,7 +9,7 @@ from nsl.go.gotypes import Player
 ## class GoString
 ## ---------------------------------------------------------
 
-class GoString():  # <1>
+class GoString():
     """Go strings are stones that are linked by a chain of connected
     stones of the same color.
 
@@ -45,6 +45,20 @@ class GoString():  # <1>
             self.color == other.color and \
             self.stones == other.stones and \
             self.liberties == other.liberties
+
+## =========================================================
+## class Board
+## ---------------------------------------------------------
+
+class Board():
+    """A board is initialized as empty grid with the specified number of
+    rows and columns.
+
+    """
+    def __init__(self, num_rows, num_cols):
+        self.num_rows = num_rows
+        self.num_cols = num_cols
+        self._grid = {}
 
 ## =========================================================
 ## class Move
