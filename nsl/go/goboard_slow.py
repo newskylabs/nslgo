@@ -82,6 +82,30 @@ class Board():
                     adjacent_opposite_color.append(neighbor_string)
         new_string = GoString(player, [point], liberties)
 
+    def is_on_grid(self, point):
+        return 1 <= point.row <= self.num_rows and \
+            1 <= point.col <= self.num_cols
+
+    def get(self, point):
+        """Returns the content of a point on the board: a Player if there is a
+        stone on that point or else None.
+
+        """
+        string = self._grid.get(point)
+        if string is None:
+            return None
+        return string.color
+
+    def get_go_string(self, point):
+        """Returns the entire string of stones at a point: a GoString if there
+        is a stone on that point or else None.
+
+        """
+        string = self._grid.get(point)
+        if string is None:
+            return None
+        return string
+
 ## =========================================================
 ## class Move
 ## ---------------------------------------------------------
