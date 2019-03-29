@@ -98,6 +98,19 @@ class Board():
             if other_color_string.num_liberties == 0:
                 self._remove_string(other_color_string)
                 
+    def _remove_string(self, string):
+        """Removing a string can create liberties for other strings.
+
+        """
+        for point in string.stones:
+            for neighbor in point.neighbors():  # <1>
+                neighbor_string = self._grid.get(neighbor)
+                if neighbor_string is None:
+                    continue
+                if neighbor_string is not string:
+                    neighbor_string.add_liberty(point)
+            del(self._grid[point])
+
     def is_on_grid(self, point):
         return 1 <= point.row <= self.num_rows and \
             1 <= point.col <= self.num_cols
