@@ -200,6 +200,14 @@ class GameState():
         board = Board(*board_size)
         return GameState(board, Player.black, None, None)
 
+    def is_move_self_capture(self, player, move):
+        if not move.is_play:
+            return False
+        next_board = copy.deepcopy(self.board)
+        next_board.place_stone(player, move.point)
+        new_string = next_board.get_go_string(move.point)
+        return new_string.num_liberties == 0
+
     def is_over(self):
         if self.last_move is None:
             return False
