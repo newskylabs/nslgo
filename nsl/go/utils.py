@@ -1,9 +1,26 @@
 ## =========================================================
 ## nsl/go/utils.py
 ## ---------------------------------------------------------
+
+import sys
 import os
 
+from nsl.go.__about__ import __version__
 from nsl.go import gotypes
+
+## =========================================================
+## Version
+## ---------------------------------------------------------
+
+def get_version():
+    """Return package version as defined in `setup.py` (ex: 1.2.3)."""
+
+    return __version__
+
+def get_version_long():
+    """Return long package version (ex: 1.2.3 (Python 3.4.5))."""
+
+    return '{} (Python {})'.format(get_version(), sys.version[:5])
 
 ## =========================================================
 ## COLS
