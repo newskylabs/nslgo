@@ -13,23 +13,41 @@ See also the github repository of the book:
 - [Code and other material for the book "Deep Learning and the Game of Go"](https://github.com/maxpumperla/deep_learning_and_the_game_of_go)
 
 
+## Installation
+
+You can install *nslgo* with *pip* directly from its *[github repository](https://github.com/newskylabs/nslgo)*:
+
+```sh
+pip install git+https://github.com/newskylabs/nslgo
+```
+
+
+## Uninstallation
+
+You can uninstall *nslgo* as follows:
+
+```sh
+pip uninstall nslgo
+```
+
+
 ## Usage
 
 ### Two bots playing randomly against each other
 
-```
+```sh
 nslgo bvb
 ```
 
 For more information use:
 
-```
+```sh
 nslgo -h
 ```
 
 and / or
 
-```
+```sh
 nslgo bvb -h
 ```
 
