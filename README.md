@@ -13,3 +13,10 @@ See also the github repository of the book:
 - [Code and other material for the book "Deep Learning and the Game of Go"](https://github.com/maxpumperla/deep_learning_and_the_game_of_go)
 
 
+
+
+# Comments etc.
+
+If you have any comments, [please drop me a message](http://dietrich.newskylabs.net/email)!
+
+*Copyright (c) 2019 [Dietrich Bollmann](http://dietrich.newskylabs.net/)*
