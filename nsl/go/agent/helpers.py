@@ -2,7 +2,7 @@
 ## nsl/go/agent/helpers.py
 ## ---------------------------------------------------------
 
-from dl.go.gotypes import Point
+from nsl.go.gotypes import Point
 
 ## =========================================================
 ## is_point_an_eye(board, point, color)
