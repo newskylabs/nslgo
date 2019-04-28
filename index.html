@@ -8,7 +8,7 @@
   <meta name="description" content="None">
   
   <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Welcome to MkDocs - nslgo Documentation</title>
+  <title>nslgo Documentation - nslgo Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/theme.css" type="text/css" />
@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Welcome to MkDocs";
+    var mkdocs_page_name = "nslgo Documentation";
     var mkdocs_page_input_path = "index.md";
     var mkdocs_page_url = null;
   </script>
@@ -51,16 +51,20 @@
           
             <li class="toctree-l1 current">
 		
-    <a class="current" href=".">Welcome to MkDocs</a>
+    <a class="current" href=".">nslgo Documentation</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#welcome-to-mkdocs">Welcome to MkDocs</a></li>
+    <li class="toctree-l2"><a href="#nslgo-documentation">nslgo Documentation</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#commands">Commands</a></li>
+            <li><a class="toctree-l3" href="#installation">Installation</a></li>
         
-            <li><a class="toctree-l3" href="#project-layout">Project layout</a></li>
+            <li><a class="toctree-l3" href="#uninstalling">Uninstalling</a></li>
+        
+            <li><a class="toctree-l3" href="#usage">Usage</a></li>
+        
+            <li><a class="toctree-l3" href="#comments-etc">Comments etc.</a></li>
         
         </ul>
     
@@ -90,7 +94,7 @@
     
       
     
-    <li>Welcome to MkDocs</li>
+    <li>nslgo Documentation</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -100,21 +104,51 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+                <h1 id="nslgo-documentation">nslgo Documentation</h1>
+<p>Notes concerning my experiments with deep learning and go.</p>
+<p>Code and experiments have been inspired by the book</p>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
+<li><a href="https://www.manning.com/books/deep-learning-and-the-game-of-go">"Deep Learning and the Game of Go"</a>
+by 
+<a href="https://maxpumperla.com/">Max Pumperla</a> and 
+<a href="https://github.com/macfergus">Kevin Ferguson</a>.</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<p>See also the github repository of the book:</p>
+<ul>
+<li><a href="https://github.com/maxpumperla/deep_learning_and_the_game_of_go">Code and other material for the book "Deep Learning and the Game of Go"</a></li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>You can install <em>nslgo</em> with <em>pip</em> directly from its <em><a href="https://github.com/newskylabs/nslgo">github repository</a></em>:</p>
+<pre><code class="sh">pip install git+https://github.com/newskylabs/nslgo
 </code></pre>
+
+<h2 id="uninstalling">Uninstalling</h2>
+<p>You can uninstall <em>nslgo</em> as follows:</p>
+<pre><code class="sh">pip uninstall nslgo
+</code></pre>
+
+<h2 id="usage">Usage</h2>
+<h3 id="commands">Commands</h3>
+<ul>
+<li><code>nslgo -h</code> - Help message.</li>
+<li><code>nslgo bvb</code> - Two bots playing randomly against each other.</li>
+<li><code>nslgo bvb -h</code> - Help message for the command <code>nslgo bvb</code></li>
+</ul>
+<h3 id="two-bots-playing-randomly-against-each-other">Two bots playing randomly against each other</h3>
+<pre><code class="sh">nslgo bvb
+</code></pre>
+
+<p>For more information use:</p>
+<pre><code class="sh">nslgo -h
+</code></pre>
+
+<p>and / or</p>
+<pre><code class="sh">nslgo bvb -h
+</code></pre>
+
+<h2 id="comments-etc">Comments etc.</h2>
+<p>If you have any comments, <a href="http://dietrich.newskylabs.net/email">please drop me a message</a>!</p>
+<p><em>Copyright &copy; 2019 &nbsp; <a href="http://dietrich.newskylabs.net/">Dietrich Bollmann</a>. &nbsp; All rights reserved.</em></p>
               
             </div>
           </div>
@@ -154,5 +188,5 @@ docs/
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-04-28 09:03:48
+Build Date UTC : 2019-04-28 09:35:41
 -->
