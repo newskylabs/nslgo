@@ -1,5 +1,9 @@
+
+# Site name
 site_name: My Docs
 
+# Theme
 theme: readthedocs
+extra_css: [extra.css]
 
-
+# fin.
