@@ -1,17 +1,73 @@
-# Welcome to MkDocs
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
 
-## Commands
+# nslgo Documentation
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
 
-## Project layout
+Notes concerning my experiments with deep learning and go.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Code and experiments have been inspired by the book
+
+- ["Deep Learning and the Game of Go"](https://www.manning.com/books/deep-learning-and-the-game-of-go)
+by 
+[Max Pumperla](https://maxpumperla.com/) and 
+[Kevin Ferguson](https://github.com/macfergus).
+
+
+See also the github repository of the book:
+
+- [Code and other material for the book "Deep Learning and the Game of Go"](https://github.com/maxpumperla/deep_learning_and_the_game_of_go)
+
+
+## Installation
+
+You can install *nslgo* with *pip* directly from its *[github repository](https://github.com/newskylabs/nslgo)*:
+
+```sh
+pip install git+https://github.com/newskylabs/nslgo
+```
+
+
+## Uninstalling
+
+You can uninstall *nslgo* as follows:
+
+```sh
+pip uninstall nslgo
+```
+
+
+## Usage
+
+
+### Commands
+
+* `nslgo -h` - Help message.
+* `nslgo bvb` - Two bots playing randomly against each other.
+* `nslgo bvb -h` - Help message for the command `nslgo bvb`
+
+
+### Two bots playing randomly against each other
+
+```sh
+nslgo bvb
+```
+
+For more information use:
+
+```sh
+nslgo -h
+```
+
+and / or
+
+```sh
+nslgo bvb -h
+```
+
+
+## Comments etc.
+
+If you have any comments, [please drop me a message](http://dietrich.newskylabs.net/email)!
+
+*Copyright &copy; 2019 &nbsp; [Dietrich Bollmann](http://dietrich.newskylabs.net/). &nbsp; All rights reserved.*
+
