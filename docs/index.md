@@ -17,6 +17,10 @@ See also the github repository of the book:
 
 - [Code and other material for the book "Deep Learning and the Game of Go"](https://github.com/maxpumperla/deep_learning_and_the_game_of_go)
 
+The [githup page of *nslgo*](https://github.com/newskylabs/nslgo) is here:
+
+- [github.com/newskylabs/nslgo](https://github.com/newskylabs/nslgo)
+
 
 ## Installation
 
