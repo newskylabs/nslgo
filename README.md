@@ -13,6 +13,15 @@ See also the github repository of the book:
 - [Code and other material for the book "Deep Learning and the Game of Go"](https://github.com/maxpumperla/deep_learning_and_the_game_of_go)
 
 
+## Documentation
+
+- [nslgo Documentation](https://newskylabs.com/nslgo)
+
+
+## Installation
+
+https://newskylabs.com/nslgo
+
 ## Installation
 
 You can install *nslgo* with *pip* directly from its *[github repository](https://github.com/newskylabs/nslgo)*:
