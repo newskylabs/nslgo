@@ -46,6 +46,17 @@ def find_packages(namespace):
         for package in setuptools.PackageFinder.find(where=namespace)
     ]
 
+def find_scripts(dir):
+    """
+    Return the list of scripts defined in 'dir'
+    """
+    package_dir = os.path.abspath(os.path.dirname(__file__))
+    script_dir = os.path.join(package_dir, dir)
+    scripts = [os.path.join(dir, script)
+               for script in os.listdir(script_dir) 
+               if os.path.isfile(os.path.join(script_dir, script))]
+    return scripts
+
 ## =========================================================
 ## Setup
 ## ---------------------------------------------------------
@@ -59,8 +70,11 @@ exec(read_file(namespace, subnamespace, '__about__.py'))
 # Read the long description
 long_description = read_file('README.md')
 
-# Find the list of packages
+# List of packages
 packages = find_packages(namespace)
+
+# List of scripts
+scripts = find_scripts('scripts')
 
 # Setup package
 setuptools.setup(
@@ -86,6 +100,7 @@ setuptools.setup(
             'nslgo = nsl.go.__main__:cli',
         ]
     },
+    scripts=scripts,
 )
 
 ## =========================================================
