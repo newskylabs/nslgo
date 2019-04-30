@@ -1,22 +1,43 @@
-# ==========================================================
-# nslgo's mkdocs documentation
-# ----------------------------------------------------------
-# 
-# See: 
-# 
-#   - mkdocs
-#     https://www.mkdocs.org/
-# 
-# ----------------------------------------------------------
+## =========================================================
+## nslgo's mkdocs documentation
+## ---------------------------------------------------------
+## 
+## See: 
+## 
+##   - mkdocs
+##     https://www.mkdocs.org/
+## 
+## Serve locally with:
+## 
+##   cd <base-dir>
+##   mkdocs serve
+## 
+## The page will be served at: http://127.0.0.1:8000/
+## 
+## Serve on github with:
+## 
+##   cd <base-dir>
+##   mkdocs gh-deploy
+## 
+## ---------------------------------------------------------
 
-# Site name
+# Site description
 site_name: nslgo Documentation
+site_description: NewSkyLabs nslgo Documentation.
+site_author: Dietrich Bollmann
 
 # Theme
 theme: readthedocs
 extra_css: [extra.css]
 
-# ==========================================================
-# ==========================================================
+# Navigation
+nav:
+  - Home: index.md
+    
+# Copyright
+copyright: Copyright &copy; 2019 [Dietrich Bollmann](http://dietrich.newskylabs.net/)
 
-# fin.
+## =========================================================
+## =========================================================
+
+## fin.
