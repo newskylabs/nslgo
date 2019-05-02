@@ -4,6 +4,7 @@
 
 import copy
 from nsl.go.gotypes import Player
+import nsl.go.zobrist as zobrist
 
 ## =========================================================
 ## class GoString
