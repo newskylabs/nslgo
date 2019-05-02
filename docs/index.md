@@ -98,5 +98,3 @@ nslgo hvb -h
 
 If you have any comments, [please drop me a message](http://dietrich.newskylabs.net/email)!
 
-*Copyright &copy; 2019 &nbsp; [Dietrich Bollmann](http://dietrich.newskylabs.net/). &nbsp; All rights reserved.*
-
