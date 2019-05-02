@@ -84,6 +84,27 @@ def print_board(board, prefix='  '):
     print(prefix + '     ' + ' '.join(COLS[:board.num_cols]))
 
 ## =========================================================
+## point_from_coords()
+## ---------------------------------------------------------
+
+def point_from_coords(coords):
+
+    # Exit when asked for
+    if coords == 'e' or coords == 'exit' or \
+       coords == 'q' or coords == 'quit':
+        print('')
+        exit()
+
+    # Converting the column letter to the corresponding column index
+    col = COLS.index(coords[0].upper()) + 1
+
+    # Getting the row index
+    row = int(coords[1:])
+
+    # Returning the corresponding Point
+    return gotypes.Point(row=row, col=col)
+
+## =========================================================
 ## =========================================================
 
 ## fin.

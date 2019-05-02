@@ -24,6 +24,7 @@ import click
 
 from nsl.go.utils import get_version_long
 from nsl.go.scripts.bot_v_bot import bot_v_bot
+from nsl.go.scripts.human_v_bot import human_v_bot
 
 ## =========================================================
 ## Entry point of console script 'nslgo'
@@ -41,7 +42,7 @@ def cli():
     """
 
 ## =========================================================
-## Command: generate
+## Command: bvb
 ## ---------------------------------------------------------
 
 # Help texts
@@ -57,6 +58,26 @@ def command_generate(board_size, sleep):
 
     # A random bot playing against another random bot
     bot_v_bot(board_size=board_size, sleep=sleep)
+    
+    # Done
+    print('done.')
+    print('')
+
+## =========================================================
+## Command: hvb
+## ---------------------------------------------------------
+
+# Help texts
+board_size_help = "Size of the go board."
+
+@cli.command(name="hvb")
+@click.option('--board-size', default=5, type=int, help=board_size_help)
+def command_generate(board_size):
+    """A human playing against a random bot.
+    """
+
+    # A human playing against a random bot
+    human_v_bot(board_size=board_size)
     
     # Done
     print('done.')
