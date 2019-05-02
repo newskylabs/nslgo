@@ -166,6 +166,12 @@ class Board():
             return None
         return string
 
+    def zobrist_hash(self):
+        """Returns the current Zobrist hash of the board.
+
+        """
+        return self._hash
+
 ## =========================================================
 ## class Move
 ## ---------------------------------------------------------
