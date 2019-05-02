@@ -82,6 +82,7 @@ and / or
 
 ```sh
 nslgo bvb -h
+nslgo hvb -h
 ```
 
 
