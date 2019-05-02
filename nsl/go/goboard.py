@@ -264,13 +264,25 @@ class GameState:
             return False
         next_board = copy.deepcopy(self.board)
         next_board.place_stone(player, move.point)
-        next_situation = (player.other, next_board)
-        past_state = self.previous_state
-        while past_state is not None:
-            if past_state.situation == next_situation:
-                return True
-            past_state = past_state.previous_state
-        return False
+
+        # Old version (goboard_slow.py):
+        # 
+        # DIETRICH:
+        # 
+        #   How about checking for Zobrist hash collision by using the
+        #   old code to double check if the states really are the same
+        # 
+        #| next_situation = (player.other, next_board)
+        #| past_state = self.previous_state
+        #| while past_state is not None:
+        #|     if past_state.situation == next_situation:
+        #|         return True
+        #|     past_state = past_state.previous_state
+        #| return False
+        #| 
+        # New version (goboard.py):
+        next_situation = (player.other, next_board.zobrist_hash())
+        return next_situation in self.previous_states
 
     def is_valid_move(self, move):
         if self.is_over():
