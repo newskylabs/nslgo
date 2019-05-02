@@ -16,14 +16,21 @@ class GoString():
     """
     def __init__(self, color, stones, liberties):
         self.color = color
-        self.stones = set(stones)
-        self.liberties = set(liberties)
+        # `stones` and `liberties` are immutable `frozenset` instances
+        self.stones = frozenset(stones)
+        self.liberties = frozenset(liberties)
 
-    def remove_liberty(self, point):
-        self.liberties.remove(point)
+    def without_liberty(self, point):
+        # The `without_liberty` method replaces the `remove_liberty` method 
+        # in goboard_slow.py
+        new_liberties = self.liberties - set([point])
+        return GoString(self.color, self.stones, new_liberties)
 
-    def add_liberty(self, point):
-        self.liberties.add(point)
+    def with_liberty(self, point):
+        # `with_liberty` replaces `add_liberty`
+        # in goboard_slow.py
+        new_liberties = self.liberties | set([point])
+        return GoString(self.color, self.stones, new_liberties)
 
     def merged_with(self, go_string):  # <2>
         """Return a new Go string containing all stones in both strings.
