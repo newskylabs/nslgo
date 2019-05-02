@@ -117,18 +117,30 @@ class Board():
             if other_color_string.num_liberties == 0:
                 self._remove_string(other_color_string)
                 
+    def _replace_string(self, new_string):
+        """Helper method to update our Go board grid.
+
+        """
+        for point in new_string.stones:
+            self._grid[point] = new_string
+
     def _remove_string(self, string):
-        """Removing a string can create liberties for other strings.
+        """Removing a string.
 
         """
         for point in string.stones:
-            for neighbor in point.neighbors():  # <1>
+
+            # Removing a string can create liberties for other strings.
+            for neighbor in point.neighbors():
                 neighbor_string = self._grid.get(neighbor)
                 if neighbor_string is None:
                     continue
                 if neighbor_string is not string:
-                    neighbor_string.add_liberty(point)
-            del(self._grid[point])
+                    self._replace_string(neighbor_string.with_liberty(point))
+            self._grid[point] = None
+
+            # With Zobrist hashing, you need to unapply the hash for this move.
+            self._hash ^= zobrist.HASH_CODE[point, string.color]
 
     def is_on_grid(self, point):
         return 1 <= point.row <= self.num_rows and \
