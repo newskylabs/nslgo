@@ -213,11 +213,21 @@ class Move():
 ## class GameState
 ## ---------------------------------------------------------
 
-class GameState():
+class GameState:
+    
     def __init__(self, board, next_player, previous, move):
         self.board = board
         self.next_player = next_player
         self.previous_state = previous
+
+        # Initializing game state with Zobrist hashes
+        if self.previous_state is None:
+            self.previous_states = frozenset()
+        else:
+            self.previous_states = frozenset(
+                previous.previous_states |
+                {(previous.next_player, previous.board.zobrist_hash())})
+            
         self.last_move = move
 
     def apply_move(self, move):
