@@ -48,7 +48,31 @@ pip uninstall nslgo
 nslgo bvb
 ```
 
-For more information use:
+Or with different board sizes and sleep times:
+
+```sh
+nslgo bvb --board-size 5 --sleep 0
+nslgo bvb --board-size 7 --sleep 0
+nslgo bvb --board-size 9 --sleep 0
+nslgo bvb --board-size 19 --sleep 0
+```
+
+### A human playing against a random bot
+
+```sh
+nslgo hvb
+```
+
+Or with different board sizes and sleep times:
+
+```sh
+nslgo hvb --board-size 5
+nslgo hvb --board-size 7
+nslgo hvb --board-size 9
+nslgo hvb --board-size 19
+```
+
+### For more information use:
 
 ```sh
 nslgo -h
