@@ -5,7 +5,11 @@
 import time
 
 from nsl.go import agent
-from nsl.go import goboard_slow as goboard
+# Import goboard 
+# There are three versions with different degree of optimizations:
+#| from nsl.go import goboard_slow as goboard
+from nsl.go import goboard
+#| from nsl.go import goboard_fast as goboard
 from nsl.go import gotypes
 from nsl.go.utils import print_board, print_move, clear_screen
 

@@ -5,7 +5,9 @@
 import random
 from nsl.go.agent.base import Agent
 from nsl.go.agent.helpers import is_point_an_eye
-from nsl.go.goboard_slow import Move
+#| from nsl.go.goboard_slow import Move
+from nsl.go.goboard import Move
+#| from nsl.go.goboard_fast import Move
 from nsl.go.gotypes import Point
 
 ## =========================================================
